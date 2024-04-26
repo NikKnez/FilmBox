@@ -23,10 +23,10 @@ import java.util.stream.Collectors;
 public class TokenProvider {
 
     @Value("${app.jwt.secret}")
-    private String jwtSecret;
+    public String jwtSecret;
 
     @Value("${app.jwt.expiration.minutes}")
-    private Long jwtExpirationMinutes;
+    public Long jwtExpirationMinutes;
 
     public String generate(Authentication authentication) {
         CustomUserDetails user = (CustomUserDetails) authentication.getPrincipal();
